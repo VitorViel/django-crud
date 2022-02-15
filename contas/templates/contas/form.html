@@ -1,0 +1,31 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+</head>
+<body>
+<div class="w3-container">
+    <h1> Bem vindo a inserção de transações</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button class="w3-btn w3-round-large w3-button w3-black" type="submit">Enviar</button>
+    </form>
+    <br>
+    <button class="w3-btn w3-round-large w3-button w3-black" type="button">
+        <a href="{% url 'listagem' %}">Lista de produtos</a>
+    </button>
+</div>
+</body>
+</html>
